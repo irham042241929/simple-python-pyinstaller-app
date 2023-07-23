@@ -15,5 +15,10 @@ pipeline {
                 echo "Test Success"
             }
         }
+		stage('Manual Approval') {
+			steps {
+				input message: 'Lanjutkan ke tahap Deploy? (Klik "Proceed" untuk mengakhiri)'
+			}
+		}
     }
 }
