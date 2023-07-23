@@ -20,5 +20,12 @@ pipeline {
 				input message: 'Lanjutkan ke tahap Deploy? (Klik "Proceed" untuk mengakhiri)'
 			}
 		}
+		stage('Deploy') {
+			steps {
+				echo "Jeda 1 menit..."
+				sleep 60
+				echo "Jeda selesai."
+			}
+		}
     }
 }
